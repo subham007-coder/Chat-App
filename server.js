@@ -16,6 +16,11 @@ app.get("/", (req, res) => {
   res.sendFile(__dirname + '/index.html');
 });
 
+// register
+app.get("/register", (req, res) => {
+  res.sendFile(__dirname + '/register.html');
+});
+
 // Socket
 
 const io = require("socket.io")(http);
