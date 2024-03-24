@@ -12,12 +12,12 @@ http.listen(PORT, () => {
 
 app.use(express.static(__dirname + "/public"));
 
-app.get("/", (req, res) => {
+app.get("/chat", (req, res) => {
   res.sendFile(__dirname + '/index.html');
 });
 
 // register
-app.get("/register", (req, res) => {
+app.get("/", (req, res) => {
   res.sendFile(__dirname + '/register.html');
 });
 

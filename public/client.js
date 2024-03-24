@@ -3,9 +3,14 @@ let name;
 let textarea = document.querySelector("#textarea");
 let messageArea = document.querySelector(".message__area");
 let sendMsg = document.querySelector(".sendMsg");
-do {
-  name = prompt("Please enter your name: ");
-} while (!name);
+
+// register box events
+// let fullName = document.querySelector(".full-name").value;
+// let password = document.querySelector(".password-box");
+
+// do {
+//   name = prompt("Please enter your name: ");
+// } while (!name);
 
 textarea.addEventListener("keyup", (e) => {
   if (e.key === "Enter") {
@@ -13,9 +18,13 @@ textarea.addEventListener("keyup", (e) => {
   }
 });
 
-    sendMsg.addEventListener("click", () => {
-        sendMessage(textarea.value);
-      })
+let typeVal = textarea.addEventListener("input", (e) =>{
+  console.log(e.target.value);
+});
+
+sendMsg.addEventListener("click", () => {
+  sendMessage(textarea.value);
+});
 
 
 function sendMessage(message) {
